@@ -19,13 +19,13 @@ f = 0.2
 
 while True:
 	for i in range(len(LED)):
-	GPIO.setup(LED[i], GPIO.OUT)
-	pwm = GPIO.PWM(LED[i],500)
-	pwm.start
-	B = math.sin(2*math.pi*f*t-i*math.pi/11)
-	B = B**2
-	brightness = B*100
-	pwm.ChangeDutyCycle(brightness)
+		GPIO.setup(LED[i], GPIO.OUT)
+		pwm = GPIO.PWM(LED[i],500)
+		pwm.start
+		B = math.sin(2*math.pi*f*t-i*math.pi/11)
+		B = B**2
+		brightness = B*100
+		pwm.ChangeDutyCycle(brightness)
 
 	# t = time.time() - timer
 	# for pins in LED:
