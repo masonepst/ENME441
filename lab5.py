@@ -10,6 +10,7 @@ GPIO.setup(3, GPIO.OUT)
 
 pwm = GPIO.PWM(2,500)
 pwm2 = GPIO.PWM(3,500)
+pwm2.start(0)
 pwm.start(0)
 timer = time.time()
 f = 0.2
