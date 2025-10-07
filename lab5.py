@@ -6,6 +6,7 @@ import math
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(2, GPIO.OUT)
+GPIO.setup(3, GPIO.OUT)
 
 pwm = GPIO.PWM(2,500)
 pwm2 = GPIO.PWM(3,500)
