@@ -17,12 +17,12 @@ f = 0.2
 
 while True:
 	t = time.time() - timer
-	# B = math.sin(2*math.pi*f*t)
-	# B = B**2
+	B = math.sin(2*math.pi*f*t)
+	B = B**2
 
-	# brightness = B*100
+	brightness = B*100
 
-	# pwm.ChangeDutyCycle(brightness)
+	pwm.ChangeDutyCycle(brightness)
 
 	B2 = math.sin(2*math.pi*f*t-math.pi/11)
 	B2 = B2**2
