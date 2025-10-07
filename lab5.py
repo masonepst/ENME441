@@ -15,7 +15,7 @@ timer = time.time()
 f = 0.2
 
 while True:
-	# t = time.time() - timer
+	t = time.time() - timer
 	# B = math.sin(2*math.pi*f*t)
 	# B = B**2
 
