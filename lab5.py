@@ -1,7 +1,7 @@
 # LED order 2,3,4,17,27,22,14,15,18,23
 
 import RPi.GPIO as GPIO
-from time import time
+import time
 import math
 
 GPIO.setmode(GPIO.BCM)
