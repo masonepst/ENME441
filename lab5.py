@@ -1,19 +1,19 @@
-LED = [2,3,4,17,27,22,14,15,18,23]
-
 import RPi.GPIO as GPIO
 import time
 import math
 
 GPIO.setmode(GPIO.BCM)
 timer = time.time()
+LED = [2,3,4,17,27,22,14,15,18,23]
 f = 0.2
+
+LED_pwm = []
 
 for i in range(len(LED)):
 	GPIO.setup(LED[i], GPIO.OUT)
 	pwm = GPIO.PWM(LED[i],500)
 	pwm.start(0)
-	pwms.append(pwm)
-LED_pwm = []
+	LED_pwm.append(pwm)
 
 while True:
 		t = time.time() - timer
