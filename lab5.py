@@ -3,6 +3,7 @@ import time
 import math
 
 GPIO.setmode(GPIO.BCM)
+GPIO.setup(21, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
 timer = time.time()
 LED = [2,3,4,17,27,22,14,15,18,23]
 f = 0.2
