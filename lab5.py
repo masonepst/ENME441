@@ -15,8 +15,8 @@ def on():
 def off():
 	n = -1
 
-GPIO.add_event_detect(21, gpio.RISING, callback = on, bouncetime = 100)
-GPIO.add_event_detect(21, gpio.FALLING, callback = off, bouncetime = 100)
+GPIO.add_event_detect(21, GPIO.RISING, callback = on, bouncetime = 100)
+GPIO.add_event_detect(21, GPIO.FALLING, callback = off, bouncetime = 100)
 
 for i in range(len(LED)):
 	GPIO.setup(LED[i], GPIO.OUT)
