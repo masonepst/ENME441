@@ -11,7 +11,6 @@ f = 0.2
 LED_pwm = []
 n = 1
 def callback_func(pin):
-	print("button pressed")
 	global n
 	if GPIO.input(21) == 1:
 		n = 1
