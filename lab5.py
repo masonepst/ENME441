@@ -5,13 +5,6 @@ import time
 import math
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(2, GPIO.OUT)
-GPIO.setup(3, GPIO.OUT)
-
-pwm = GPIO.PWM(2,500)
-pwm2 = GPIO.PWM(3,500)
-pwm2.start(0)
-pwm.start(0)
 timer = time.time()
 f = 0.2
 
@@ -24,11 +17,11 @@ LED_pwm = []
 
 while True:
 		t = time.time() - timer
-		for i in range(len(LED_pwm))
-		B = math.sin(2*math.pi*f*t-i*math.pi/11)
-		B = B**2
-		brightness = B*100
-		LED_pwm[i].ChangeDutyCycle(brightness)
+		for i in range(len(LED_pwm)):
+			B = math.sin(2*math.pi*f*t-i*math.pi/11)
+			B = B**2
+			brightness = B*100
+			LED_pwm[i].ChangeDutyCycle(brightness)
 
 	# for pins in LED:
 
