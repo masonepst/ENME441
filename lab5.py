@@ -9,15 +9,14 @@ LED = [2,3,4,17,27,22,14,15,18,23]
 f = 0.2
 
 LED_pwm = []
+n = 1
+def callback_func():
+	if GPIO.input(21) == 1:
+		n = 1
+	else:
+		n = -1
 
-def on():
-	n = 1
-
-def off():
-	n = -1
-
-GPIO.add_event_detect(21, GPIO.RISING, callback = on, bouncetime = 100)
-GPIO.add_event_detect(21, GPIO.FALLING, callback = off, bouncetime = 100)
+GPIO.add_event_detect(21, GPIO.BOTH, callback = callback_func, bouncetime = 100)
 
 for i in range(len(LED)):
 	GPIO.setup(LED[i], GPIO.OUT)
